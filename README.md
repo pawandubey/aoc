@@ -1,36 +1,22 @@
 # aoc
 
-FIXME: description
+Solutions for https://adventofcode.com/2017
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone and run with `lein`
 
 ## Usage
 
-FIXME: explanation
+For day `n` and problem `m`:
 
-    $ java -jar aoc-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```
+lein run -m aoc.day{n}.prob{m}
+```
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Pawan Dubey
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
