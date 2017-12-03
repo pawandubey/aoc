@@ -1,10 +1,6 @@
 (ns aoc.day2.prob1
-  (:require [aoc.util :refer [read-input]]
+  (:require [aoc.util :refer :all]
             [clojure.string :as str]))
-
-(defn parse-int [x] (Integer/parseInt x))
-
-(defn parse-list [x] (map parse-int x))
 
 #_(and
    (= '(1 2 3) (parse-list (list "1" "2" "3")))
@@ -15,13 +11,13 @@
   (->> (read-input "day2/prob1")
        (str/split-lines)
        (map #(str/split % #"\s+"))
-       (map parse-list)))
+       (map parse-int-list)))
 
 (defn checksum1
   [input]
   (->> input
        (map (fn [r] [(apply max r) (apply min r)]))
-       (map (fn [[M m]] (- M m)))
+       (map (fn [[max min]] (- max min)))
        (reduce +)))
 
 (defn -main
